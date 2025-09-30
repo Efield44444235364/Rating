@@ -1,3 +1,13 @@
+-- รายการ Place ID ที่อนุญาต
+local allowedPlaceIds = {
+    [126509999114328] = true,
+    [1759235639673] = true
+}
+
+-- ตรวจสอบว่าอยู่ใน Place ID ที่อนุญาตหรือไม่
+if not allowedPlaceIds[game.PlaceId] then
+    return -- ไม่อนุญาต, หยุดสคริปต์ตรงนี้
+end
 
 
 local Players = game:GetService("Players")
